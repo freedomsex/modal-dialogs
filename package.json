@@ -1,0 +1,28 @@
+{
+  "name": "@freedomsex/modal-dialogs",
+  "version": "1.0.0",
+  "description": "modal dialogs",
+  "main": "ModalDialog.vue",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@freedomsex/styles": "0.0.3",
+    "vue-i18n": "^8.15.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/freedomsex/modal-dialogs.git"
+  },
+  "keywords": [
+    "modal",
+    "dialogs",
+    "vue"
+  ],
+  "author": "tebaly <support@freedomsex.net>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/freedomsex/modal-dialogs/issues"
+  },
+  "homepage": "https://github.com/freedomsex/modal-dialogs#readme"
+}
