@@ -1,5 +1,5 @@
 <script>
-import ModalDialog from './ModalDialog';
+import StandartDialog from './StandartDialog';
 
 export default {
   props: [
@@ -8,6 +8,9 @@ export default {
     'noText',
     'notation',
   ],
+  components: {
+    StandartDialog,
+  },
   computed: {
     yes() {
       return this.yesText || this.$t('ok');
@@ -24,9 +27,6 @@ export default {
     confirm() {
       this.$emit('confirm');
     },
-  },
-  components: {
-    ModalDialog,
   },
 };
 </script>
@@ -53,35 +53,37 @@ export default {
 </i18n>
 
 <template>
-  <ModalDialog @close="$emit('close')">
-    <div class="modal-dialog__wrapper">
-      <div class="modal-dialog__caption">
-        <slot name="title"></slot>
-      </div>
-      <div class="modal-dialog__body">
-        <slot></slot>
-      </div>
-      <div class="modal-dialog__footer">
-        <button class="btn btn-default"
-         @click="cancel"
-         v-if="simple !== true">
-          <slot name="noIcon"></slot>
-          {{no}}
-        </button>
-        <button class="btn btn-primary btn-flat"
-         @click="confirm">
+  <StandartDialog @close="$emit('close')">
+    <template #title>
+      <slot name="title"></slot>
+    </template>
+
+    <template #default>
+      <slot></slot>
+    </template>
+
+    <template #footer>
+      <div class="buttons">
+        <button class="button is-primary" @click="confirm">
           <slot name="yesIcon"></slot>
           {{yes}}
         </button>
+        <button class="button" @click="cancel" v-if="simple !== true">
+          <slot name="noIcon"></slot>
+          {{no}}
+        </button>
       </div>
-      <div class="confirm-dialog__notation"><!-- css trick
-      --><slot name="notation"></slot></div>
-    </div>
-  </ModalDialog>
+      <div class="modal__notation"><slot name="notation"></slot></div>
+    </template>
+
+    <template #extend>
+      <slot name="extend"></slot>
+    </template>
+  </StandartDialog>
 </template>
 
 <style lang="less">
-.confirm-dialog {
+.modal {
   &__notation {
     font-size: 10px;
     color: #999;

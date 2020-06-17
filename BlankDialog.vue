@@ -1,24 +1,23 @@
 <script>
-import ModalDialog from './ModalDialog';
+import WrappedDialog from './WrappedDialog';
 
 export default {
   components: {
-    ModalDialog,
+    WrappedDialog,
   },
 };
 </script>
 
 <template>
-  <ModalDialog @close="$emit('close')">
-    <div class="modal-dialog__wrapper">
-      <div class="modal-dialog__caption">
-        <slot name="title"></slot>
-      </div>
-      <div class="modal-dialog__body">
-        <slot></slot>
-      </div>
+  <WrappedDialog @close="$emit('close')">
+    <div class="modal__caption">
+      <slot name="title"></slot>
     </div>
-  </ModalDialog>
+    <div class="modal__body">
+      <slot></slot>
+    </div>
+    <slot name="extend"></slot>
+  </WrappedDialog>
 </template>
 
 <style lang="less">

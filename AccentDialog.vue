@@ -6,13 +6,13 @@ export default {
   computed: {
     style() {
       const btn = {
-        default: 'btn-default',
-        success: 'btn-success',
-        warning: 'btn-warning',
-        danger: 'btn-danger',
-        info: 'btn-info',
+        default: '',
+        success: 'is-success',
+        warning: 'is-warning',
+        danger: 'is-danger',
+        info: 'is-info',
       };
-      return this.type ? btn[this.type] : 'btn-primary';
+      return this.type ? btn[this.type] : 'is-primary';
     },
     yes() {
       return this.yesText || 'Хорошо';

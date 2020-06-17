@@ -1,4 +1,4 @@
-<script> 
+<script>
 export default {
   methods: {
     onEsc(event) {
@@ -7,85 +7,60 @@ export default {
       }
     },
   },
-  mounted() { 
+  mounted() {
     document.addEventListener('keydown', this.onEsc);
   },
   beforeDestroy() {
     document.removeEventListener('keydown', this.onEsc);
-  }, 
+  },
 };
 </script>
 
 <template>
-  <div class="modal-dialog__mask" transition="modal">
-    <div class="modal-dialog__overlay" @click="$emit('close')">
-      <div class="modal-dialog__container" @click.stop>
-        <slot></slot>
-      </div>
-    </div> 
+  <div class="modal is-active" transition="modal">
+    <div class="modal-background" @click="$emit('close')"></div>
+    <div class="modal-content">
+      <slot></slot>
+    </div>
+    <slot name="extend"></slot>
+    <button class="modal-close is-large" @click="$emit('close')"></button>
   </div>
 </template>
 
-<style lang="less"> 
-.modal-dialog {
-  &__mask {
-    .fixed-dialog-mask;
-    overflow-y: auto;
+<style lang="less">
+.modal {
+  button {
+    text-transform: uppercase;
   }
 
-  &__overlay {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    min-height: 100%;
-  }
-
-  &__wrapper {
-    padding: @indent-md;
+  .modal-content {
     text-align: left;
     white-space: normal;
     &.capped {
       padding-top: @indent-sm;
     }
   }
-  &__container {
-        width: 100%;
-    min-width: 200px;
-    max-width: 400px;
-    // max-height: 100%;
-    // overflow: auto;
-    background: @white;
-    color: @dark;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
-    transition: all 0.3s ease;
-    border-radius: 4px;
-    position: relative;
-    margin: 10px;
-    z-index: 1;
 
-    .btn {
-      text-transform: uppercase;
-    }
-  }
   &__caption {
-    font-size: @font-lg;
+    font-size: 1.5em;
     font-weight: bold;
   }
-  &__body {
-    font-size: 14px;
-    margin: @indent-xs 0 @indent-md;
 
-    .body-spacer {
-      margin-bottom: @indent-sm;
-    }
+  .body-spacer {
+    margin-bottom: @indent-sm;
   }
+
   &__section {
     margin: 0 0 @indent-sm;
   }
-  &__footer {
-    text-align: right;
+
+  &__body {
+    font-size: 1em;
+    margin: @indent-xs 0 @indent-md;
   }
+  // &__footer {
+  //   text-align: right;
+  // }
   &__centred {
     text-align: center;
   }
@@ -98,6 +73,20 @@ export default {
     }
   }
 }
+
+// .modal-dialog {
+//
+//
+//   &__wrapper {
+//     padding: @indent-md;
+//   }
+//
+//   &__body {
+//     font-size: 14px;
+//     margin: @indent-xs 0 @indent-md;
+//
+//   }
+// }
 
 .modal-enter,
 .modal-leave {

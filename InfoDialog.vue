@@ -1,18 +1,21 @@
 <script>
-import ModalDialog from './ModalDialog';
+import StandartDialog from './StandartDialog';
 
 export default {
   props: ['type', 'strict', 'yesText'],
+  components: {
+    StandartDialog,
+  },
   computed: {
     style() {
       const btn = {
-        default: 'btn-default',
-        success: 'btn-success',
-        warning: 'btn-warning',
-        danger: 'btn-danger',
-        info: 'btn-info',
+        default: '',
+        success: 'is-success',
+        warning: 'is-warning',
+        danger: 'is-danger',
+        info: 'is-info',
       };
-      return this.type ? btn[this.type] : 'btn-primary';
+      return this.type ? btn[this.type] : 'is-primary';
     },
     yes() {
       return this.yesText || this.$t('ХОРОШО');
@@ -26,9 +29,6 @@ export default {
       }
     },
   },
-  components: {
-    ModalDialog,
-  },
 };
 </script>
 
@@ -41,24 +41,28 @@ export default {
 </i18n>
 
 <template>
-  <ModalDialog @close="$emit('close')">
-    <div class="modal-dialog__wrapper">
-      <div class="modal-dialog__caption">
-        <slot name="title"></slot>
-      </div>
-      <div class="modal-dialog__body">
-        <slot></slot>
-      </div>
-      <div class="modal-dialog__footer">
-        <button class="btn btn-flat" :class="style"
-         @click="confirm">
-          <slot name="yesIcon"></slot>
-          {{yes}}
-        </button>
-      </div>
-    </div>
-  </ModalDialog>
+  <StandartDialog @close="$emit('close')">
+    <template #title>
+      <slot name="title"></slot>
+    </template>
+
+    <template #default>
+      <slot></slot>
+    </template>
+
+    <template #footer>
+      <button class="button" :class="style" @click="confirm">
+        <slot name="yesIcon"></slot>
+        {{yes}}
+      </button>
+    </template>
+
+    <template #extend>
+      <slot name="extend"></slot>
+    </template>
+  </StandartDialog>
 </template>
 
 <style lang="less">
+
 </style>
