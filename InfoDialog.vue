@@ -53,7 +53,7 @@ export default {
     <template #footer>
       <button class="button" :class="style" @click="confirm">
         <slot name="yesIcon"></slot>
-        {{yes}}
+        <span>{{yes}}</span>
       </button>
     </template>
 

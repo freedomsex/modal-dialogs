@@ -66,11 +66,11 @@ export default {
       <div class="buttons">
         <button class="button is-primary" @click="confirm">
           <slot name="yesIcon"></slot>
-          {{yes}}
+          <span>{{yes}}</span>
         </button>
         <button class="button" @click="cancel" v-if="simple !== true">
           <slot name="noIcon"></slot>
-          {{no}}
+          <span>{{no}}</span>
         </button>
       </div>
       <div class="modal__notation"><slot name="notation"></slot></div>
