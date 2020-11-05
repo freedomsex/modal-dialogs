@@ -56,9 +56,9 @@ export default {
 
   &__body {
     font-size: 1em;
-    margin: $size-small 0 $size-small;
+    margin: 0;
     .wide-content {
-      margin: 0 -1.25rem;
+      margin: 0 -$size-medium;
     }
   }
   &__centred {
