@@ -1,0 +1,15 @@
+@import "~bulma/sass/utilities/initial-variables";
+@import "~bulma/sass/utilities/functions";
+@import "~bulma/sass/utilities/derived-variables";
+@import "~bulma/sass/utilities/mixins";
+@import "~bulma/sass/utilities/controls";
+
+// your settings here
+
+$desktop: 550px;
+$widescreen: 550px;
+$fullhd: 550px;
+
+$section-padding: 1rem 1rem;
+
+$primary: hsl(217, 71%, 53%);
