@@ -7,7 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@freedomsex/styles": "0.0.3",
     "vue-i18n": "^8.15.3"
   },
   "repository": {

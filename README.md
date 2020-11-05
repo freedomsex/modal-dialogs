@@ -1,6 +1,6 @@
 # Modal dialogs
 
-Dialogs components for freedomsex projects. Raw VUE components. Depend on global styles `@freedomsex/styles`, `bulma` and `vue-i18n` translator.
+Dialogs components for freedomsex projects. Raw VUE components. Depend on global `bulma` and `vue-i18n` translator.
 
 * ModalDialog
 * AccentDialog

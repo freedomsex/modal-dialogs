@@ -16,6 +16,3 @@ export default {
     <slot name="extend"></slot>
   </ModalDialog>
 </template>
-
-<style lang="less">
-</style>

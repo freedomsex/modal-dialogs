@@ -27,6 +27,3 @@ export default {
     <slot name="extend"></slot>
   </BlankDialog>
 </template>
-
-<style lang="less">
-</style>

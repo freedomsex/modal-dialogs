@@ -62,7 +62,3 @@ export default {
     </template>
   </StandartDialog>
 </template>
-
-<style lang="less">
-
-</style>

@@ -27,7 +27,7 @@ export default {
   </div>
 </template>
 
-<style lang="less">
+<style lang="scss">
 .modal {
   button {
     text-transform: uppercase;
@@ -37,7 +37,7 @@ export default {
     text-align: left;
     white-space: normal;
     &.capped {
-      padding-top: @indent-sm;
+      padding-top: $size-normal;
     }
   }
 
@@ -47,20 +47,20 @@ export default {
   }
 
   .body-spacer {
-    margin-bottom: @indent-sm;
+    margin-bottom: $size-normal;
   }
 
   &__section {
-    margin: 0 0 @indent-sm;
+    margin: 0 0 $size-normal;
   }
 
   &__body {
     font-size: 1em;
-    margin: @indent-xs 0 @indent-md;
+    margin: $size-small 0 $size-small;
+    .wide-content {
+      margin: 0 -1.25rem;
+    }
   }
-  // &__footer {
-  //   text-align: right;
-  // }
   &__centred {
     text-align: center;
   }
@@ -73,20 +73,6 @@ export default {
     }
   }
 }
-
-// .modal-dialog {
-//
-//
-//   &__wrapper {
-//     padding: @indent-md;
-//   }
-//
-//   &__body {
-//     font-size: 14px;
-//     margin: @indent-xs 0 @indent-md;
-//
-//   }
-// }
 
 .modal-enter,
 .modal-leave {

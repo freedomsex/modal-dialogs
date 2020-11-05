@@ -19,6 +19,3 @@ export default {
     <slot name="extend"></slot>
   </WrappedDialog>
 </template>
-
-<style lang="less">
-</style>

@@ -47,12 +47,12 @@ export default {
   </ModalDialog>
 </template>
 
-<style lang="less">
+<style lang="scss">
 .dialog-caption {
-  background: @menu-color;
-  color: @white;
+  background: $primary;
+  color: $scheme-main;
   font-size: 16px;
-  padding: (@indent-sm + @indent-sm * 0.2) @indent-sm @indent-sm;
+  padding: ($size-normal + $size-normal * 0.2) $size-normal $size-normal;
   display: flex;
   &__title {
     flex: 3 1 auto;
@@ -64,10 +64,10 @@ export default {
   }
   &__option {
     flex: 0 0 auto;
-    color: @white;
+    color: $scheme-main;
     cursor: pointer;
     a {
-      color: @white;
+      color: $scheme-main;
       display: inline-block;
     }
     .material-icons {
@@ -83,7 +83,7 @@ export default {
   }
 
   &.warning {
-    background: @orange;
+    background: $warning;
   }
 }
 </style>

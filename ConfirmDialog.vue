@@ -82,12 +82,12 @@ export default {
   </StandartDialog>
 </template>
 
-<style lang="less">
+<style lang="scss">
 .modal {
   &__notation {
     font-size: 10px;
     color: #999;
-    margin-top: @indent-sm;
+    margin-top: $size-normal;
 
     &:empty {
       display: none;
