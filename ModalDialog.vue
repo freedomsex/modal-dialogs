@@ -42,7 +42,7 @@ export default {
   }
 
   &__caption {
-    font-size: 1.25em;
+    font-size: $size-normal;
     font-weight: bold;
   }
 
@@ -56,9 +56,9 @@ export default {
 
   &__body {
     font-size: 1em;
-    margin: $size-medium 0;
+    margin: $size-normal 0;
     .wide-content {
-      margin: $size-medium -$size-medium;
+      margin: $size-normal -$size-medium;
     }
   }
   &__centred {
