@@ -42,7 +42,7 @@ export default {
   }
 
   &__caption {
-    font-size: $size-normal;
+    font-size: $size-medium;
     font-weight: bold;
   }
 
