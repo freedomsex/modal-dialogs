@@ -42,7 +42,7 @@ export default {
   }
 
   &__caption {
-    margin-bottom: $size-normal;
+    margin-bottom: $size-small;
     font-size: $size-medium;
     font-weight: bold;
   }
