@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.8](https://github.com/freedomsex/modal-dialogs/compare/v2.0.7...v2.0.8) (2020-11-22)
+
+
+### Bug Fixes
+
+* caption margin ([97b27ca](https://github.com/freedomsex/modal-dialogs/commit/97b27ca233ab041dfa2571a89e0386bf24c55132))
+
 ### [2.0.7](https://github.com/freedomsex/modal-dialogs/compare/v2.0.6...v2.0.7) (2020-11-22)
 
 
