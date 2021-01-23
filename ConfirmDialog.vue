@@ -13,10 +13,10 @@ export default {
   },
   computed: {
     yes() {
-      return this.yesText || this.$t('ok');
+      return this.yesText || 'ХОРОШО';
     },
     no() {
-      return this.noText || this.$t('no');
+      return this.noText || 'ОТМЕНА';
     },
   },
   methods: {
@@ -30,27 +30,6 @@ export default {
   },
 };
 </script>
-
-<i18n>
-{
-  "ru": {
-    "ok": "ХОРОШО",
-    "no": "ОТМЕНА"
-  },
-  "en": {
-    "ok": "OKAY",
-    "no": "CANCEL"
-  },
-  "kz": {
-    "ok": "ЖАҚСЫ",
-    "no": "ЖОЮҒА"
-  },
-  "ua": {
-    "ok": "ДОБРЕ",
-    "no": "СКАСУВАТИ"
-  }
-}
-</i18n>
 
 <template>
   <StandartDialog @close="$emit('close')">
