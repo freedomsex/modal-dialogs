@@ -1,5 +1,6 @@
 {
   "name": "@freedomsex/modal-dialogs",
+  "version": "2.1.0",
   "description": "modal dialogs",
   "main": "ModalDialog.vue",
   "scripts": {
