@@ -63,9 +63,11 @@ export default {
       margin: 0 - $size-medium $size-normal;
     }
   }
+
   &__centred {
     text-align: center;
   }
+
   &__options {
     .material-icons {
       vertical-align: middle;
