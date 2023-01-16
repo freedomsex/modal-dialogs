@@ -60,7 +60,7 @@ export default {
     margin: $size-normal 0;
     margin-top: 0;
     .wide-content {
-      margin: 0 -$size-medium $size-normal;
+      margin: 0 - $size-medium $size-normal;
     }
   }
   &__centred {
