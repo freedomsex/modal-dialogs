@@ -87,4 +87,5 @@ export default {
 .modal-leave .modal-dialog__container {
   transform: scale(1.1);
 }
+
 </style>
