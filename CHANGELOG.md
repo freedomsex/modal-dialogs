@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.1](https://github.com/freedomsex/modal-dialogs/compare/2.1.0...2.1.1) (2023-01-16)
+
+
+### Bug Fixes
+
+* ver ([1477a6c](https://github.com/freedomsex/modal-dialogs/commit/1477a6c913ed252478286d1541849c842fa72f03))
+* ver ([c27b792](https://github.com/freedomsex/modal-dialogs/commit/c27b7929171f70ed178b951389767eb9ced5e347))
+* ver ([1b145dc](https://github.com/freedomsex/modal-dialogs/commit/1b145dcff458dd78fa407fe5d61051d6e07c0e97))
+
 ### [2.0.9](https://github.com/freedomsex/modal-dialogs/compare/2.1.0...2.0.9) (2023-01-16)
 
 
